@@ -1,7 +1,7 @@
 {
-  "name": "seneca-redis-transport",
-  "version": "0.3.0",
-  "description": "Seneca Redis transport",
+  "name": "seneca-redis-async-transport",
+  "version": "0.1.0",
+  "description": "Seneca Redis Async transport",
   "main": "lib/index.js",
   "scripts": {
     "test": "lab test/*.test.js -r console -v -L",
@@ -10,10 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rjrodger/seneca-redis-transport.git"
+    "url": "git://github.com/checklistpartner/seneca-redis-async-transport.git"
   },
   "keywords": [
     "seneca",
+    "async",
     "transport",
     "plugin",
     "redis",
@@ -25,8 +26,8 @@
   "author": "Richard Rodger (http://richardrodger.com)",
   "license": "MIT",
   "dependencies": {
-    "lodash": "~2.4.1",
-    "redis": "~0.12.1"
+    "lodash": "^4.14.1",
+    "redis": "^2.6.2"
   },
   "devDependencies": {
     "coveralls": "^2.11.6",

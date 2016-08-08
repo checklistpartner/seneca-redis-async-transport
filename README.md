@@ -1,7 +1,7 @@
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
 > A [Seneca.js][] transport plugin for Redis
 
-# seneca-redis-transport
+# seneca-redis-async-transport
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
 [![Coverage Status][coveralls-badge]][coveralls-url]
@@ -29,7 +29,7 @@ To install, simply use npm. Remember you will need to install [Seneca.js][] if y
 
 ```sh
 npm install seneca
-npm install seneca-redis-transport
+npm install seneca-redis-async-transport
 ```
 
 In order to use this transport, you need to have a [redis][] daemon running. The deamon and instructions on how to install can be found on the redis [install page][].
@@ -38,7 +38,7 @@ In order to use this transport, you need to have a [redis][] daemon running. The
 
 ```js
 require('seneca')()
-  .use('redis-transport')
+  .use('redis-async-transport')
   .add('foo:two', function(args, done) {done(null, {bar:args.bar})})
   .client({type:'redis', pin:'foo:one, bar:*'})
   .listen({type:'redis', pin:'foo:two, bar:*'})
@@ -51,14 +51,14 @@ documentation, examples, extra testing, or new features please get in touch.
 ## License
 Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 
-[npm-badge]: https://img.shields.io/npm/v/seneca-redis-transport.svg
-[npm-url]: https://npmjs.com/package/seneca-redis-transport
-[travis-badge]: https://api.travis-ci.org/rjrodger/seneca-redis-transport.svg
-[travis-url]: https://travis-ci.org/rjrodger/seneca-redis-transport
-[coveralls-badge]:https://coveralls.io/repos/rjrodger/seneca-redis-transport/badge.svg?branch=master&service=github
-[coveralls-url]: https://coveralls.io/github/rjrodger/seneca-redis-transport?branch=master
-[david-badge]: https://david-dm.org/rjrodger/seneca-redis-transport.svg
-[david-url]: https://david-dm.org/rjrodger/seneca-redis-transport
+[npm-badge]: https://img.shields.io/npm/v/seneca-redis-async-transport.svg
+[npm-url]: https://npmjs.com/package/seneca-redis-async-transport
+[travis-badge]: https://api.travis-ci.org/rjrodger/seneca-redis-async-transport.svg
+[travis-url]: https://travis-ci.org/rjrodger/seneca-redis-async-transport
+[coveralls-badge]:https://coveralls.io/repos/rjrodger/seneca-redis-async-transport/badge.svg?branch=master&service=github
+[coveralls-url]: https://coveralls.io/github/rjrodger/seneca-redis-async-transport?branch=master
+[david-badge]: https://david-dm.org/rjrodger/seneca-redis-async-transport.svg
+[david-url]: https://david-dm.org/rjrodger/seneca-redis-async-transport
 [gitter-badge]: https://badges.gitter.im/senecajs/seneca.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 
@@ -71,5 +71,5 @@ Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 [Senecajs org]: https://github.com/senecajs/
 [senecajs.org]: http://senecajs.org/
 [Seneca.js]: https://www.npmjs.com/package/seneca
-[github issue]: https://github.com/rjrodger/seneca-redis-transport/issues
+[github issue]: https://github.com/rjrodger/seneca-redis-async-transport/issues
 [@senecajs]: http://twitter.com/senecajs
